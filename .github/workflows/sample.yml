@@ -22,4 +22,15 @@ jobs:
             - name: "Print current directory"
               run: pwd
 
+            - name: "List files in current directory"
+              run: ls 
+
+            - name: "Setup node JS"
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+
+            - name: "Check node version"
+              run: node --version
+
 
