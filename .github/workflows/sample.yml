@@ -1,0 +1,19 @@
+name: "Sample pipeline/workflow" # Name of the pipeline
+
+on:
+    push:
+        branches:
+            - master # Trigger the pipeline on push to master branch
+            - main # Trigger the pipeline on push to main branch
+
+jobs:
+    sampleJob:
+        runs-on: ubuntu-latest # Run the pipeline on ubuntu-latest runner
+        steps:
+            - name: "Print hello world"
+              run: echo "Hello world"
+
+            - name: "Print current directory"
+              run: pwd
+
+
